@@ -1,11 +1,12 @@
-let rows = document.getElementById("inputHeight");
-let columns = document.getElementById("inputWeight");
-let sizePicker = document.getElementById("sizePicker");
-let colorPicker = document.getElementById("colorPicker");
-let pixelCanvas = document.getElementById("pixelCanvas");
+let rows = document.getElementById("inputHeight"),
+    columns = document.getElementById("inputWeight"),
+    sizePicker = document.getElementById("sizePicker"),
+    colorPicker = document.getElementById("colorPicker"),
+    pixelCanvas = document.getElementById("pixelCanvas");
 
-sizePicker.addEventListener("submit", makeGrid);
 
+
+//  fill pixel
 document.addEventListener("click", function (e) {
     let pixel = e.target;
     if (pixel.classList.contains("pixel")) {
@@ -18,19 +19,20 @@ document.addEventListener("click", function (e) {
         }
 
     }
+});
 
-})
 
-function makeGrid(e) {
+// create canvas
+sizePicker.addEventListener("submit", function(e) {
     e.preventDefault();
-    let content = "";
+    let canvas = "";
 
     for (let indexRows = 0; indexRows < rows.value; indexRows++) {
-        content += "<tr>";
+        canvas += "<tr>";
         for (let indexCol = 0; indexCol < columns.value; indexCol++) {
-            content += "<td class='pixel'></td>";
+            canvas += "<td class='pixel'></td>";
         }
-        content += "</tr>";
+        canvas += "</tr>";
     }
-    pixelCanvas.innerHTML = content;
-}
+    pixelCanvas.innerHTML = canvas;
+});
