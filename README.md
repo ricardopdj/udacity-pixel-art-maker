@@ -1,4 +1,4 @@
-# Memory Game Project
+# Pixel art maker
 
 * Open index.html.
 * Just Play!
