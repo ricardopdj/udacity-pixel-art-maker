@@ -1,4 +1,6 @@
 body {
+    background-color: #2a2b28;
+    color: #fff;
     font-family: Roboto;
     text-align: center;
 }
@@ -6,15 +8,7 @@ body {
 h1 {
     font-family: Monoton;
     font-size: 70px;
-    margin: 0.2em;
-}
-
-h2 {
-    margin: 1em 0 0.25em;
-}
-
-h2:first-of-type {
-    margin-top: 0.5em;
+    margin: 1em;
 }
 
 table,
@@ -38,4 +32,12 @@ td {
 
 input[type=number] {
     width: 6em;
+}
+
+#sizePicker {
+    margin-bottom: 3em;
+}
+
+#pixelCanvas {
+    background-color: #fff;
 }
